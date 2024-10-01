@@ -1,32 +1,37 @@
-<h2>Login Form</h2>
-<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
-  <!-- Email -->
-  <div>
-    <label for="email">Email:</label>
-    <input
-      type="email"
-      id="email"
-      name="email"
-      required
-      email
-      [(ngModel)]="login.email"
-      #email="ngModel"
-    />
-  </div>
-
-  <!-- Password -->
-  <div>
-    <label for="password">Password:</label>
-    <input
-      type="password"
-      id="password"
-      name="password"
-      required
-      [(ngModel)]="login.password"
-      #password="ngModel"
-    />
-  </div>
-
-  <!-- Submit Button -->
-  <button type="submit" [disabled]="loginForm.invalid">Login</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login & Registration Form</title>
+</head>
+<body>
+  <main class="container">
+    <input type="checkbox" id="check" hidden>
+    <section class="login form">
+      <header>Login</header>
+      <form action="#" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" aria-label="Email" required>
+        <input type="password" name="password" placeholder="Enter your password" aria-label="Password" required>
+        <a href="#">Forgot password?</a>
+        <button type="submit" class="button">Login</button>
+      </form>
+      <div class="signup">
+        <span>Don't have an account? <label for="check">Signup</label></span>
+      </div>
+    </section>
+    <section class="registration form">
+      <header>Signup</header>
+      <form action="#" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" aria-label="Email" required>
+        <input type="password" name="password" placeholder="Create a password" aria-label="Password" required>
+        <input type="password" name="confirm_password" placeholder="Confirm your password" aria-label="Confirm Password" required>
+        <button type="submit" class="button">Signup</button>
+      </form>
+      <div class="signup">
+        <span>Already have an account? <label for="check">Login</label></span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
